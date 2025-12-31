@@ -1,61 +1,175 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400" alt="Laravel Logo"></a></p>
+# 🚀 Sistem Pemilihan Motor Berbasis Web (TOPSIS)
 
-<p align="center">
-<a href="https://github.com/laravel/framework/actions"><img src="https://github.com/laravel/framework/workflows/tests/badge.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
-</p>
+Sistem Pemilihan Motor adalah aplikasi berbasis web yang dirancang untuk membantu pengguna dalam **memilih motor terbaik** berdasarkan beberapa kriteria penilaian menggunakan **metode TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)**.
 
-## About Laravel
+Aplikasi ini menyediakan fitur pengelolaan data motor, pembeli, pelunasan, serta proses perhitungan dan perangkingan motor secara objektif dan terstruktur.
 
-Laravel is a web application framework with expressive, elegant syntax. We believe development must be an enjoyable and creative experience to be truly fulfilling. Laravel takes the pain out of development by easing common tasks used in many web projects, such as:
+---
 
-- [Simple, fast routing engine](https://laravel.com/docs/routing).
-- [Powerful dependency injection container](https://laravel.com/docs/container).
-- Multiple back-ends for [session](https://laravel.com/docs/session) and [cache](https://laravel.com/docs/cache) storage.
-- Expressive, intuitive [database ORM](https://laravel.com/docs/eloquent).
-- Database agnostic [schema migrations](https://laravel.com/docs/migrations).
-- [Robust background job processing](https://laravel.com/docs/queues).
-- [Real-time event broadcasting](https://laravel.com/docs/broadcasting).
+## 📌 Tujuan Aplikasi
+- Membantu pengguna menentukan motor terbaik berdasarkan kriteria tertentu
+- Menerapkan metode **SPK (Sistem Pendukung Keputusan)** secara nyata
+- Menyediakan sistem manajemen data motor, pembeli, dan pelunasan
+- Menyajikan hasil perhitungan TOPSIS secara transparan dan mudah dipahami
 
-Laravel is accessible, powerful, and provides tools required for large, robust applications.
+---
 
-## Learning Laravel
+## 🛠️ Teknologi yang Digunakan
 
-Laravel has the most extensive and thorough [documentation](https://laravel.com/docs) and video tutorial library of all modern web application frameworks, making it a breeze to get started with the framework.
+| Teknologi | Keterangan |
+|---------|-----------|
+| **Laravel 11** | Framework backend PHP |
+| **PHP 8+** | Bahasa pemrograman utama |
+| **MySQL** | Database relasional |
+| **AdminLTE** | Template dashboard |
+| **Bootstrap 5** | UI & layout |
+| **Font Awesome** | Ikon |
+| **SweetAlert2** | Dialog konfirmasi |
+| **DomPDF** | Export PDF |
+| **Maatwebsite Excel** | Import & Export Excel |
 
-You may also try the [Laravel Bootcamp](https://bootcamp.laravel.com), where you will be guided through building a modern Laravel application from scratch.
+---
 
-If you don't feel like reading, [Laracasts](https://laracasts.com) can help. Laracasts contains thousands of video tutorials on a range of topics including Laravel, modern PHP, unit testing, and JavaScript. Boost your skills by digging into our comprehensive video library.
+## 👤 Role Pengguna
 
-## Laravel Sponsors
+### 🔑 Admin
+- Login ke sistem
+- Mengelola data motor (CRUD)
+- Mengelola data pembeli
+- Mengelola data pelunasan
+- Mengimpor & mengekspor data motor
+- Mencetak data motor berdasarkan filter tanggal
+- Mengelola bobot TOPSIS
+- Melihat dan mencetak hasil perangkingan
 
-We would like to extend our thanks to the following sponsors for funding Laravel development. If you are interested in becoming a sponsor, please visit the [Laravel Partners program](https://partners.laravel.com).
+### 👥 User
+- Login ke sistem
+- Melihat data motor
+- Melihat hasil ranking TOPSIS
+- Melihat detail motor
 
-### Premium Partners
+---
 
-- **[Vehikl](https://vehikl.com)**
-- **[Tighten Co.](https://tighten.co)**
-- **[Kirschbaum Development Group](https://kirschbaumdevelopment.com)**
-- **[64 Robots](https://64robots.com)**
-- **[Curotec](https://www.curotec.com/services/technologies/laravel)**
-- **[DevSquad](https://devsquad.com/hire-laravel-developers)**
-- **[Redberry](https://redberry.international/laravel-development)**
-- **[Active Logic](https://activelogic.com)**
+## 📂 Fitur Utama
 
-## Contributing
+### 1️⃣ Autentikasi
+- Login & logout
+- Proteksi halaman menggunakan middleware `auth`
 
-Thank you for considering contributing to the Laravel framework! The contribution guide can be found in the [Laravel documentation](https://laravel.com/docs/contributions).
+### 2️⃣ Manajemen Data Motor
+- CRUD motor per kategori:
+  - Listrik
+  - Matic
+  - Sport
+- Upload gambar motor
+- Tanggal import otomatis (datetime)
+- Pagination & pencarian
 
-## Code of Conduct
+### 3️⃣ Manajemen Pembeli
+- Input data pembeli
+- Relasi wilayah (provinsi, kabupaten, kecamatan)
+- Hak akses admin
 
-In order to ensure that the Laravel community is welcoming to all, please review and abide by the [Code of Conduct](https://laravel.com/docs/contributions#code-of-conduct).
+### 4️⃣ Manajemen Pelunasan
+- Pencatatan pelunasan motor
+- Status: `Lunas / Belum Lunas`
+- Satu pelunasan dapat memuat banyak motor
+- Relasi ke pembeli
 
-## Security Vulnerabilities
+### 5️⃣ Sistem Pendukung Keputusan (TOPSIS)
+- Input bobot kriteria
+- Perhitungan TOPSIS otomatis
+- Ranking per kategori motor
+- Tampilan ranking modern (dark theme)
+- Detail nilai tiap kriteria
 
-If you discover a security vulnerability within Laravel, please send an e-mail to Taylor Otwell via [taylor@laravel.com](mailto:taylor@laravel.com). All security vulnerabilities will be promptly addressed.
+### 6️⃣ Export & Cetak
+- Export Excel data motor
+- Export PDF
+- Cetak data motor berdasarkan:
+  - Kategori
+  - Rentang tanggal import
+  - Pencarian
 
-## License
+---
 
-The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+## 🧮 Kriteria Penilaian Motor
+
+| Kriteria | Jenis |
+|--------|------|
+| Harga | Cost |
+| Kenyamanan | Benefit |
+| Perawatan | Benefit |
+
+---
+
+## 🧾 Struktur Tabel Utama
+
+### 📌 Tabel `motor`
+- `id`
+- `nama_motor`
+- `brand`
+- `kategori`
+- `harga`
+- `kenyamanan`
+- `perawatan`
+- `gambar`
+- `tanggal_import`
+- `created_at`
+- `updated_at`
+
+### 📌 Tabel `pembeli`
+- `id`
+- `nama`
+- `alamat`
+- `telepon`
+- `provinsi_id`
+- `provinsi_nama`
+- `kabupaten_id`
+- `kabupaten_nama`
+- `kecamatan_id`
+- `kecamatan_nama`
+- `created_at`
+- `updated_at`
+
+### 📌 Tabel `pelunasan`
+- `id`
+- `no_pelunasan`
+- `pembeli_id`
+- `status`
+- `tanggal_pelunasan`
+- `daftar_motor` (JSON)
+- `created_at`
+- `updated_at`
+
+---
+
+## 🔁 Alur Aplikasi
+
+### Alur Admin
+1. Login
+2. Kelola data motor
+3. Kelola data pembeli
+4. Input pelunasan
+5. Atur bobot TOPSIS
+6. Lihat ranking motor
+7. Export / cetak data
+
+### Alur User
+1. Login
+2. Lihat data motor
+3. Lihat hasil ranking TOPSIS
+4. Lihat detail motor
+
+---
+
+## ⚙️ Instalasi & Setup
+
+```bash
+git clone https://github.com/username/nama-repo.git
+cd nama-repo
+composer install
+cp .env.example .env
+php artisan key:generate
+php artisan migrate
+php artisan serve
