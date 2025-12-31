@@ -180,3 +180,7 @@ cp .env.example .env
 php artisan key:generate
 php artisan migrate
 php artisan serve
+
+## 📜 License
+This project is licensed under the MIT License.
+See the LICENSE file for details.
