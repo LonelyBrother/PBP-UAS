@@ -1,6 +1,13 @@
-# 🚀 Sistem Pemilihan Motor Berbasis Web (TOPSIS)
+# 🚀 Sistem Pemilihan Motor Berbasis Web
 
-Sistem Pemilihan Motor adalah aplikasi berbasis web yang dirancang untuk membantu pengguna dalam **memilih motor terbaik** berdasarkan beberapa kriteria penilaian menggunakan **metode TOPSIS (Technique for Order Preference by Similarity to Ideal Solution)**.
+![Laravel](https://img.shields.io/badge/Laravel-11-red?logo=laravel)
+![PHP](https://img.shields.io/badge/PHP-8.2-blue?logo=php)
+![MySQL](https://img.shields.io/badge/Database-MySQL-orange?logo=mysql)
+![License](https://img.shields.io/badge/License-MIT-green)
+
+Aplikasi sistem pendukung keputusan untuk memilih motor terbaik
+menggunakan metode TOPSIS.
+
 
 Aplikasi ini menyediakan fitur pengelolaan data motor, pembeli, pelunasan, serta proses perhitungan dan perangkingan motor secara objektif dan terstruktur.
 
